@@ -31,35 +31,19 @@
 		</form>
 
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "ankit";
-
-	$conn=mysqli_connect($servername,$username,$password,$dbname);
-	
-	
-	if ($conn) {
-		echo"connection ok";
-	}
-	else
-	{
-		die("Connection error: " . mysqli_connect_error());	
-	}
-
 	if(isset($_POST["submit"])){
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
-		$email = $_POST['email']; 
-		$contact_number = $_POST['contact_number'];
-		$password = $_POST['password'];
-		$sql = "INSERT INTO `loginankit` (`id`, `first_name`, `last_name`, `email_id`, `contact_number`, `password`) VALUES (NULL, '$first_name', '$last_name', '$email', '$contact_number', '$password')";
-		if ($conn->query($sql) === TRUE) {
-		    echo "New record created successfully";
-		} else {
-		    echo "Error: " . $sql . "<br>" . $conn->error;
-		}
-		$conn->close();
+          $first_name = $_POST['first_name'];
+	  $last_name = $_POST['last_name'];
+	  $email = $_POST['email']; 
+	  $contact_number = $_POST['contact_number'];
+	  $password = $_POST['password'];
+	  $sql = "INSERT INTO `loginankit` (`id`, `first_name`, `last_name`, `email_id`, `contact_number`, `password`) VALUES (NULL, '$first_name', '$last_name', '$email', '$contact_number', '$password')";
+	if ($conn->query($sql) === TRUE) {
+	   echo "New record created successfully";
+	} else {
+	   echo "Error: " . $sql . "<br>" . $conn->error;
+         }
+	$conn->close();
 	}
 ?>
 	</div>
