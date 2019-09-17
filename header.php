@@ -27,18 +27,6 @@ include 'dbconnection.php';
             <a class="navbar-brand" href="page-contact.php">Contact</a>
           </li>
           
-
-
-          <li class="nav-item dropdown">
-            <a class="navbar-brand" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-            </div>
-          </li>
            <?php if(empty($_SESSION['success'])) { ?>
            <li>
             <a class="navbar-brand" href="login.php?page=login">Login</a>
