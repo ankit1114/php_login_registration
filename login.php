@@ -5,7 +5,6 @@ if (isset($_POST['login'])){
 
   $user_name = $_POST['user_name'];
   $password = $_POST['password'];
-  $confirmpassword = $_POST['confirmpassword'];
   $sql="SELECT * FROM `users` WHERE user_name='$user_name' && password='$password'";
 	$query=mysqli_query($conn,$sql);
   $total=mysqli_num_rows($query);
